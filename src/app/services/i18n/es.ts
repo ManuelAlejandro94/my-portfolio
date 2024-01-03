@@ -74,5 +74,8 @@ export const locale = {
             'tools': 'Tools',
             'methodologies': 'Methodologies'
         },
+        'footer': {
+            'createdBy': 'creado por'
+        }
     }
   }
