@@ -1,14 +1,24 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'my-portfolio';
+export class AppComponent implements OnInit {
+
+  constructor(private _translateService: TranslateService){
+    this._translateService.addLangs(['en', 'es']);
+    this._translateService.setDefaultLang('es');
+  }
+
+  ngOnInit(): void {
+    if (!localStorage.getItem("lang")) {
+      localStorage.setItem("lang", 'en');
+    }
+    let lang:any=localStorage.getItem("lang"); 
+    this._translateService.setDefaultLang(lang);
+    this._translateService.use(lang);
+  }
 }
