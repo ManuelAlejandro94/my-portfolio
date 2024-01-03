@@ -5,31 +5,89 @@ li:hover,.home:hover {
 i:hover,a:hover {
   background-color: rgb(45, 51, 53);
 }
+
 nav{
   background-color: #212529;
 }
 
 i{
-font-size: 24px;
-padding-right: 6px;
-color: #6f7180;
+  font-size: 24px;
+  padding-right: 6px;
+  color: #6f7180;
 }
 
 .nav-home:hover{
-background-color: rgb(51, 59, 61);
+  background-color: rgb(51, 59, 61);
 }
+
 mat-radio-button{
-color:white;
+  color:white;
 }
+
 a{
-display: flex;
-align-items: center;
-padding: 3px 4px;
-margin-bottom: 2px;
-transition: 0.3s;
-font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 3px 4px;
+  margin-bottom: 2px;
+  transition: 0.3s;
+  font-size: 15px;
 }
 
 li{
-display: inline-flex;
+  display: inline-flex;
+}
+
+.fixed-top{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  }
+
+  @media (min-width:992px){}
+.navbar-expand-lg {
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.mat-radio-container{
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.mat-radio-label-content {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  display: inline-block;
+  order: 0;
+  line-height: inherit;
+  padding-left: 8px;
+  padding-right: 0;
+  color: white;
+}
+
+::ng-deep .mdc-label{
+  color: white;
 }

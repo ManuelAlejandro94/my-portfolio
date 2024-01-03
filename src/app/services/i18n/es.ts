@@ -57,8 +57,8 @@ export const locale = {
             'home': 'Home',
             'about': 'Acerca de mí',
             'skills': 'Habilidades',
-            'references': 'Referencias',
             'contactMe': 'Contáctame',
+            'portfolio': 'Proyectos'
         },
         'home': {
             'iAmDeveloper': 'Soy un desarrollador',
@@ -67,9 +67,6 @@ export const locale = {
             'title': 'Portfolio',
             'projectDetail':'Project detail',
             'sourceCode':'Source code',
-        },
-        'references': {
-            'title': 'References',
         },
         'skills': {
             'title': 'Skills',

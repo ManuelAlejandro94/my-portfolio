@@ -25,16 +25,8 @@
                               class='bx bx-briefcase-alt'></i>{{'header.skills' | translate}}</a>
                   </li>
                   <li class="nav-item p-1 rounded">
-                      <a class="nav-link js-scroll-trigger smooth-scroll text-uppercase" href="#cv"> <i
-                              class='bx bx-file-blank'></i>CV</a>
-                  </li>
-                  <li class="nav-item p-1 rounded">
-                      <a class="nav-link js-scroll-trigger smooth-scroll text-uppercase" href="#portfolio"> <i
-                              class='bx bx-book-content'></i>Portfolio</a>
-                  </li>
-                  <li class="nav-item p-1 rounded">
-                      <a class="nav-link js-scroll-trigger smooth-scroll text-uppercase" href="#references"><i
-                              class='bx bxs-badge-check'></i> {{'header.references' | translate}}</a>
+                      <a routerLink="projects" class="nav-link js-scroll-trigger smooth-scroll text-uppercase"> <i
+                              class='bx bx-book-content'></i>{{'header.portfolio' | translate}}</a>
                   </li>
                   <li class="nav-item p-1 rounded">
                       <a class="nav-link js-scroll-trigger smooth-scroll text-uppercase" href="#contact"> <i
@@ -43,10 +35,10 @@
                   <li class="nav-item p-1 rounded">
                       <mat-radio-group [(ngModel)]="language" style="margin-top: 5px;"
                           (change)="languageChange($event)" aria-label="Select a language">
-                          <mat-radio-button value="es" >
+                          <mat-radio-button value="es" style="color: #fff;">
                               Español
                           </mat-radio-button>
-                          <mat-radio-button value="en" class="pl-3">
+                          <mat-radio-button value="en" class="pl-3" style="color: #fff;">
                               English
                           </mat-radio-button>
                       </mat-radio-group>

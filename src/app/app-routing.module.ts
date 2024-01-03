@@ -4,10 +4,12 @@ import { HomeComponent } from "./pages/home/home.component";
 import { ProjectDetailComponent } from "./pages/project-detail/project-detail.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectComponent } from "./pages/project/project.component";
 
 const app_routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'projects', component: ProjectComponent },
     { path: 'project/:id', component: ProjectDetailComponent },
     { path: '**', pathMatch:'full', redirectTo: 'home' },
 ];
