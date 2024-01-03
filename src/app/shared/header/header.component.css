@@ -37,27 +37,6 @@ li{
   display: inline-flex;
 }
 
-.fixed-top{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.navbar {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: .5rem 1rem;
-  }
-
   @media (min-width:992px){}
 .navbar-expand-lg {
   -ms-flex-flow: row nowrap;
