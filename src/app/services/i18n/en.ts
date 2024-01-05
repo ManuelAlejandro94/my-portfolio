@@ -4,15 +4,16 @@ export const locale = {
       'about': {
           'title': 'About me',
           'jobTitle': 'Software Engineering',
-          'introductionOfMe': 'Interested in new technologies and working methods. I like to come up with ideas that to permit to improve business processes.',
+          'introductionOfMe': "I am a Master's student in Cybersecurity with experience as Developer, Consultant and Tech Lead. I have worked on projects involving automation, development, and support of applications using various technologies such as Java, Python, NodeJS, .NET and more. I also have skills in web programming, mobile app development, and database management and a couple of years of experience leading teams.",
           'passionateAboutDevelopment':'Passionate about development',
-          'mobility': 'Mobile throughout France',
+          'mobility': 'Mobile throughout CDMX',
           'years': 'Years',
-          'graduation': "Master's degree 2 IT",
+          'graduation': "Engenering Telecommunications",
           'myResearch': 'CDI contract search',
-          'researchDescription': 'I am looking for an innovative and user-centric company to best meet the needs customer, from his idea to the final delivery of his project, or participate in the improvement of a project existing.',
+          'researchDescription': "I'm looking for a job in a good place with diverse team, with passion for his work and enthusiast for know and learn about recent technologies or solutions, with a good compensation, great benefits and flexible work hours.",
           'and':'and',
           'followMeOn':'Follow me on',
+          'currentCityCountry': 'Mexico City, Mexico'
       },
       'contact': {
           'contactMe': 'Contact Me',
