@@ -40,10 +40,6 @@ a{
     text-decoration: none;
 }
 
-#about{
-    padding: 6%;
+li>div>div:nth-child(2){
+    padding-left: 6px;
 }
-
-/*.fa-linkedin:before {
-    content: "\f0e1"
-}*/

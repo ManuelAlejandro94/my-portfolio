@@ -9,7 +9,7 @@ export const locale = {
           'mobility': 'Mobile throughout CDMX',
           'years': 'Years',
           'graduation': "Engenering Telecommunications",
-          'myResearch': 'CDI contract search',
+          'myResearch': 'Full-time contract search',
           'researchDescription': "I'm looking for a job in a good place with diverse team, with passion for his work and enthusiast for know and learn about recent technologies or solutions, with a good compensation, great benefits and flexible work hours.",
           'and':'and',
           'followMeOn':'Follow me on',

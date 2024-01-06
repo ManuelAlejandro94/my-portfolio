@@ -9,7 +9,7 @@ export const locale = {
             'mobility': 'Nómada en CDMX',
             'years': 'Años',
             'graduation': "Ing. en Telecomunicaciones",
-            'myResearch': 'CDI contract search',
+            'myResearch': 'Búsqueda de contrato de tiempo completo',
             'researchDescription': 'Estoy en búsqueda de un empleo en donde se tenga un excelente ambiente laboral, con un equipo diverso que le apasiones su trabajo y sea entusiasta por conocer y aprender sobre las más recientes tecnologías y soluciones. Con una buena compensación, grandes beneficios y tiempo flexible.',
             'and':'y',
             'followMeOn':'Sígueme en',
@@ -55,7 +55,7 @@ export const locale = {
             'years':'years'
         },
         'header': {
-            'home': 'Home',
+            'home': 'Inicio',
             'about': 'Acerca de mí',
             'skills': 'Habilidades',
             'contactMe': 'Contáctame',
