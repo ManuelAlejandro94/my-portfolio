@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
               private _translateService: TranslateService){
     this._translationLoaderService.loadTranslations(english, spanish);
 
-    if (localStorage.getItem("lang")) {
-      this.language=localStorage.getItem("lang");
+    if (sessionStorage.getItem("lang")) {
+      this.language=sessionStorage.getItem("lang");
     } else {
       this.language='es';
     }
@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
   languageChange($event:any){
     let lang=$event.value;
-    localStorage.setItem("lang", lang);
+    sessionStorage.setItem("lang", lang);
     this._translateService.setDefaultLang(lang);
     this._translateService.use(lang);
   }

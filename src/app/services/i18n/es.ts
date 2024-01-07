@@ -77,6 +77,13 @@ export const locale = {
         },
         'footer': {
             'createdBy': 'creado por'
+        },
+        'working': {
+            'title': 'Trabajando en esta página',
+            'subtitle': 'Actualmente me encuentro retocando esta sección',
+            'paraph1': 'Serás redirigido automáticamente a la página principal en... ',
+            'paraph2': 'Si no eres redirigido automáticamente presiona el link de abajo',
+            'linkRedirect': 'Presióname'
         }
     }
   }

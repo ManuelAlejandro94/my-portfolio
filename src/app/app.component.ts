@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { WorkingComponent } from './shared/working/working.component';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  isShow=true;
 
   constructor(private _translateService: TranslateService){
     this._translateService.addLangs(['en', 'es']);
@@ -14,11 +16,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (!localStorage.getItem("lang")) {
-      localStorage.setItem("lang", 'en');
+    if (!sessionStorage.getItem("lang")) {
+      sessionStorage.setItem("lang", 'en');
     }
-    let lang:any=localStorage.getItem("lang"); 
+    let lang:any=sessionStorage.getItem("lang"); 
     this._translateService.setDefaultLang(lang);
     this._translateService.use(lang);
+  }
+
+  showHide(event: any){
+    this.isShow = !(event instanceof WorkingComponent);
   }
 }

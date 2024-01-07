@@ -25,6 +25,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './pages/contact/contact.component';
+import { WorkingComponent } from './shared/working/working.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     ProjectDetailComponent,
     HomeComponent,
     ProjectComponent,
-    ContactComponent
+    ContactComponent,
+    WorkingComponent
   ],
   imports: [
     BrowserModule,

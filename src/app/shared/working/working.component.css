@@ -1,0 +1,12 @@
+.container{
+    display: grid;
+    place-items: center;
+}
+
+div>div{
+    text-align: center;
+}
+
+p{
+    font-size: 1.2em;
+}
