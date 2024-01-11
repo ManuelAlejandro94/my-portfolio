@@ -26,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorkingComponent } from './shared/working/working.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { WorkingComponent } from './shared/working/working.component';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../../services/contact.service';
+import { ContactInterface } from '../../interfaces/contact.interface';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { ContactValidation } from '../../validations/contact-validation.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor (){}
+  contactModel: ContactInterface = {};
+  //contactForm!: FormGroup;
+  response: any = "";
+  loading = false;
+
+  constructor (private _contactService: ContactService){}
 
   ngOnInit(): void {
-    
   }
+
+  contact(){
+    this.contactModel.lang = sessionStorage.getItem("lang")?.toString();
+    console.log(this.contactModel);
+    
+    this._contactService.apiRequest(this.contactModel)
+      .subscribe( (resp: any) => {
+        this.loading = true;
+        this.response = resp;
+        console.log(this.response);
+      });
+  }
+
 }

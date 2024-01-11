@@ -22,7 +22,7 @@ export const locale = {
             'enterIdentify': 'Ingresa tu nombre',
             'email': 'Correo',
             'enterEmail': 'Ingresa tu correo',
-            'object': 'Asunto',
+            'subject': 'Asunto',
             'enterObject': 'Ingresa tu asunto',
             'message': 'Mensaje',
             'send': 'Enviar',
