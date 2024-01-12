@@ -1,5 +1,10 @@
 <section id="contact">
-    <div class="container mb-5">
+    <div class="loading-animation" *ngIf="loading">
+        <span class="first-ball"></span>
+        <span class="second-ball"></span>
+        <span class="third-ball"></span>
+    </div>
+    <div class="container mb-5" *ngIf="!loading">
         <h2><strong >{{'contact.contactMe' | translate}}</strong></h2>
         <span class="bar-title mb-5"></span>
         <div class="row"  data-aos="fade-up" data-aos-anchor-placement="top-center">
@@ -17,21 +22,23 @@
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="identite" placeholder="{{'contact.enterIdentify' | translate}}"
                                     name="fname" [(ngModel)]="contactModel.name" [ngModelOptions]="{standalone: true}" required
-                                    minlength="3">
+                                    minlength="3" maxlength="60">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="email">{{'contact.email' | translate}}</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control" id="email" placeholder="{{'contact.enterEmail' | translate}}" name="email"
-                                    [(ngModel)]="contactModel.email" [ngModelOptions]="{standalone: true}" required>
+                                    [(ngModel)]="contactModel.email" [ngModelOptions]="{standalone: true}" required
+                                    minlength="5" maxlength="30">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="subject">{{'contact.subject' | translate}}</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="subject" placeholder="{{'contact.enterObject' | translate}}"
-                                    name="subject" [(ngModel)]="contactModel.subject" [ngModelOptions]="{standalone: true}" required>
+                                    name="subject" [(ngModel)]="contactModel.subject" [ngModelOptions]="{standalone: true}" required
+                                    minlength="4" maxlength="300">
                             </div>
                         </div>
                         <div class="form-group">

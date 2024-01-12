@@ -3,6 +3,7 @@ import { ContactService } from '../../services/contact.service';
 import { ContactInterface } from '../../interfaces/contact.interface';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ContactValidation } from '../../validations/contact-validation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -16,20 +17,23 @@ export class ContactComponent implements OnInit {
   response: any = "";
   loading = false;
 
-  constructor (private _contactService: ContactService){}
+  constructor (private _contactService: ContactService,
+                private _router: Router){}
 
   ngOnInit(): void {
   }
 
   contact(){
+    this.loading = true;
     this.contactModel.lang = sessionStorage.getItem("lang")?.toString();
     console.log(this.contactModel);
     
     this._contactService.apiRequest(this.contactModel)
       .subscribe( (resp: any) => {
-        this.loading = true;
         this.response = resp;
         console.log(this.response);
+        this.loading = false;
+        this._router.navigate(['home']);
       });
   }
 
