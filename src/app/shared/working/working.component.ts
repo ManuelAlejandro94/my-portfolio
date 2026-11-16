@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { locale as english } from '../../services/i18n/en';
 import { locale as spanish } from '../../services/i18n/es';
@@ -6,8 +6,10 @@ import { TranslationLoaderService } from '../../services/translation-loader.serv
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-working',
   templateUrl: './working.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './working.component.css'
 })
 export class WorkingComponent implements OnInit {

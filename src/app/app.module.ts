@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 
 
 // Rutas
@@ -27,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorkingComponent } from './shared/working/working.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TurnstileComponent } from './shared/turnstile/turnstile.component';
 
 @NgModule({
   declarations: [
@@ -55,9 +56,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatButtonModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    TurnstileComponent
   ],
-  providers: [],
+  providers: [provideZoneChangeDetection()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,21 @@
+<section id="contact-success" aria-labelledby="contact-success-title">
+  <div class="container mb-5">
+    <h2 id="contact-success-title"><strong>{{'contactSuccess.title' | translate}}</strong></h2>
+    <span class="bar-title mb-5"></span>
+    <div class="confirmation-panel mx-auto text-center">
+      <div class="confirmation-icon" aria-hidden="true">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3>{{'contactSuccess.message' | translate}}</h3>
+      <p>{{'contactSuccess.thanks' | translate}}</p>
+      <p class="countdown" role="timer" aria-live="off">
+        {{(secondsRemaining === 1 ? 'contactSuccess.countdownOne' : 'contactSuccess.countdown')
+          | translate: {seconds: secondsRemaining} }}
+      </p>
+      <p class="redirect-help">{{'contactSuccess.fallback' | translate}}</p>
+      <button type="button" class="btn home-button" (click)="goHome()">
+        {{'contactSuccess.goHome' | translate}}
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TranslationLoaderService } from '../../services/translation-loader.service';
 import { TranslateService } from '@ngx-translate/core';
 import { locale as english } from '../../services/i18n/en';
@@ -6,8 +6,10 @@ import { locale as spanish } from '../../services/i18n/es';
 import $ from 'jquery';
 
 @Component({
+  standalone: false,
   selector: 'app-header',
   templateUrl: './header.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {

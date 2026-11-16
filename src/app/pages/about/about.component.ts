@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import * as awesom from '@fortawesome/free-solid-svg-icons';
 
 @Component({
+  standalone: false,
   selector: 'app-about',
   templateUrl: './about.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './about.component.css'
 })
 export class AboutComponent implements OnInit {

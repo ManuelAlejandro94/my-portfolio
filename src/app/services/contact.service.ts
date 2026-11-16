@@ -1,28 +1,21 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Inject, Injectable } from '@angular/core';
+import { Observable, timeout } from 'rxjs';
 import { ContactInterface } from '../interfaces/contact.interface';
-import { Observable, catchError, throwError } from 'rxjs';
 import { ApiResponse } from '../interfaces/apiresponse.interface';
+import { CONTACT_SETTINGS, ContactSettings } from './contact-settings';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class ContactService {
-    contact: ContactInterface = {};
-    response: any = {};
-    errorMessage: any = ""
+  constructor(
+    private readonly http: HttpClient,
+    @Inject(CONTACT_SETTINGS) private readonly settings: ContactSettings
+  ) {}
 
-    private readonly baseUrl = 'https://send-mail-api-p9pr.onrender.com/send-email';
-    private readonly baseUrlTemplate = 'https://send-mail-api-p9pr.onrender.com/send-template-mail';
-
-    constructor(private http:HttpClient){}
-
-    apiRequest(data:ContactInterface): Observable<ApiResponse> {
-        return this.http.post<ApiResponse>(this.baseUrlTemplate, data).
-            pipe(
-                catchError((err) => {
-                    return throwError(err);
-                })
-            );
-    }
+  apiRequest(data: ContactInterface, token: string): Observable<ApiResponse> {
+    // Never retry automatically: Telegram may already have accepted the message.
+    return this.http.post<ApiResponse>(this.settings.apiUrl, data, {
+      headers: { 'X-Turnstile-Token': token }
+    }).pipe(timeout(20_000));
+  }
 }

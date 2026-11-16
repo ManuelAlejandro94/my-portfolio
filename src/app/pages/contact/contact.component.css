@@ -40,6 +40,10 @@ body{
     box-shadow:none;
 }
 
+.contact-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+.contact-form fieldset { border: 0; min-width: 0; }
+.contact-feedback { color: #9b1c1c; margin: 1rem 0; }
+
 section{
     padding-top: 100px; 
 }
