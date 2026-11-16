@@ -1,0 +1,19 @@
+:host { display: block; }
+section { min-height: 75vh; padding-bottom: 3rem; }
+.confirmation-panel {
+  max-width: 720px;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: #fff;
+  border: 1px solid #dceaf2;
+  border-top: 5px solid #149ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 28px rgba(22, 59, 90, 0.08);
+}
+.confirmation-icon { color: #149ddd; font-size: 4rem; margin-bottom: 1rem; }
+h3 { color: #163b5a; font-weight: 600; }
+p { color: #364956; line-height: 1.7; }
+.countdown { color: #163b5a; font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; }
+.redirect-help { max-width: 32rem; margin: 0 auto 1.5rem; }
+.home-button { background: #149ddd; color: #fff; padding: 0.75rem 1.5rem; font-weight: 600; }
+.home-button:hover { background: #117eaf; }
+.home-button:focus-visible { outline: 3px solid #163b5a; outline-offset: 3px; }

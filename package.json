@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:contact": "ng test --watch=false --browsers=ChromeHeadless --ts-config=tsconfig.contact-spec.json --include=src/app/pages/contact/contact.component.spec.ts --include=src/app/services/contact.service.spec.ts --include=src/app/services/turnstile.service.spec.ts --include=src/app/shared/turnstile/turnstile.component.spec.ts --include=src/app/pages/contact-success/contact-success.component.spec.ts"
   },
   "private": true,
   "dependencies": {

@@ -37,3 +37,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Grima contact form
+
+The contact form now uses the independent Grima API and Cloudflare Turnstile.
+See [local setup and verification](docs/grima-local-development.md) for the two-terminal
+workflow, public environment configuration and production setup.

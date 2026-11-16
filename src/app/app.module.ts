@@ -27,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorkingComponent } from './shared/working/working.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TurnstileComponent } from './shared/turnstile/turnstile.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatButtonModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    TurnstileComponent
   ],
   providers: [provideZoneChangeDetection()],
   bootstrap: [AppComponent]

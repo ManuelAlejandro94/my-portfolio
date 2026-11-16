@@ -7,12 +7,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ProjectComponent } from "./pages/project/project.component";
 import { ContactComponent } from "./pages/contact/contact.component";
 import { WorkingComponent } from "./shared/working/working.component";
+import { ContactSuccessComponent } from "./pages/contact-success/contact-success.component";
 
 const app_routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'projects', component: ProjectComponent },
     { path: 'project/:id', component: ProjectDetailComponent },
+    { path: 'contact/success', component: ContactSuccessComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'working', component: WorkingComponent },
     { path: '**', pathMatch:'full', redirectTo: 'home' }
