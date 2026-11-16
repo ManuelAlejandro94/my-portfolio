@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
 import { ContactInterface } from '../../interfaces/contact.interface';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
@@ -6,8 +6,10 @@ import { ContactValidation } from '../../validations/contact-validation.service'
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-contact',
   templateUrl: './contact.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit {

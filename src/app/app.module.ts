@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 
 
 // Rutas
@@ -57,7 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [provideZoneChangeDetection()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

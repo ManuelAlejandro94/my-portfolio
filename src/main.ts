@@ -1,6 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
-import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 AOS.init();
